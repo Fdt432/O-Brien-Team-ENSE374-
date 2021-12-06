@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="StyleSheet1.css">    
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a> Movies World </a>
+        <a href="index.php" style="float:right;"> Login </a>
+        <a href="signup.php" style="float:right;"> Register </a>
+    </div>
+
+    <div class="main">
+
+<div class="w3-content w3-section" >
+ <img class="mySlides"  src="photos/joker.jpg" style="width:auto;height:460px;border-radius: 35px;  display: block;
+ margin-left: auto;
+ margin-right: auto;
+ width: 50%;" >
+
+<img class="mySlides" src="photos/nemo.jpg" style="width:auto;height:460px;border-radius: 35px;  display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;">
+  
+<img class="mySlides" src="photos/senor.jpg" style="width:auto;height:460px;border-radius: 35px;  display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;">
+
+<img class="mySlides" src="photos/avatar.jpg" style="width:auto;height:460px;border-radius: 35px;  display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;">
+
+<img class="mySlides" src="photos/black.jpg" style="width:auto;height:460px;border-radius: 35px;  display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;">
+
+<img class="mySlides" src="photos/free.jpg" style="width:auto;height:460px;border-radius: 35px;  display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;">
+
+<img class="mySlides" src="photos/glass.jpg" style="width:auto;height:460px;border-radius: 35px;  display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;">
+
+<img class="mySlides" src="photos/monster.jpg" style="width:auto;height:460px;border-radius: 35px;  display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;">
+
+
+<img class="mySlides" src="photos/1.jpg" style="width:auto;height:460px;border-radius: 35px;  display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;">
+
+
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>     
+    </div>
+</body>
+</html>
+
+
+
+

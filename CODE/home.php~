@@ -1,0 +1,163 @@
+<?php
+// Initialize the session
+session_start();
+
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: index.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <style>
+        body {
+            font: 14px sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a> Movies World </a>
+        <a href="logout.php" style="float:right;display:inline;">Logout </a>
+
+        <a style="display:inline;float:right;"> Welcome <?php echo htmlspecialchars($_SESSION["email"]); ?></a>
+
+    </div>
+
+    <div class="main">
+
+        <div class="row">
+            <div class="column">
+
+                <div class="flip-card">
+
+                    <div class="flip-card-inner">
+
+                        <div class="flip-card-front">
+                            <img src="photos/minions.jpg" style="width: 300px;height: 425px;border-radius: 30px;">
+                        </div>
+
+                        <div class="flip-card-back">
+                            <h1>DESPICAABLE ME</h1>
+                            <h2>Animation</h2>
+                            <div>
+                                <img src="photos/star.png" style=" width: 30px;height: 30px;border-radius: 30px;">
+                                <h2>9 / 10</h2>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="photos/babydriver.jpg" style="width: 300px;height: 425px;border-radius: 30px; ">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>BABY DRIVER</h1>
+                            <h2>Action</h2>
+                            <div>
+                                <img src="photos/star.png" style="width:30px;height:30px;">
+                                <h2>7 / 10</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="column">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="photos/us.jpg" style="width: 300px;height: 425px;border-radius: 30px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>US</h1>
+                            <h2>Horror</h2>
+                            <div>
+                                <img src="photos/star.png" style="width:30px;height:30px;">
+                                <h2>6 / 10</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+
+        <div class="row">
+            <div class="column">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="photos/badboy.jpg" style="width: 300px;height: 425px;border-radius: 30px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>BAD BOY</h1>
+                            <h2>Action</h2>
+                            <div>
+                                <img src="photos/star.png" style="width:30px;height:30px;">
+                                <h2>8.3 / 10</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="column">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="photos/hitmansbodyguard.jpg" style="width: 300px;height: 425px;border-radius: 30px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>HITMAN'S BODYGUARD</h1>
+                            <h2>Action Comedy</h2>
+                            <div>
+                                <img src="photos/star.png" style="width:30px;height:30px;">
+                                <h2>7.8 / 10</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="photos/1917.jpg" style="width: 300px;height: 425px;border-radius: 30px;">
+                        </div>
+                        <div class="flip-card-back">
+                            <h1>1917</h1>
+                            <h2>War</h2>
+                            <div>
+                                <img src="photos/star.png" style="width:30px;height:30px;">
+                                <h2>8 / 10</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
+</body>
+</html>
